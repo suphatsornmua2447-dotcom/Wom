@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>wOm | Fantasy Sports Cars</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+
+  margin:0;
+
+  font-family:Arial,sans-serif;
+
+  color:white;
+
+  background:linear-gradient(135deg,#090516,#171039,#061b2b);
+
+}
+
+header{
+
+  padding:22px;
+
+  text-align:center;
+
+  border-bottom:1px solid #a855f7;
+
+}
+
+.logo{font-size:36px;font-weight:bold;color:#d8b4fe}
+
+nav a{color:#67e8f9;margin:10px;text-decoration:none}
+
+.hero{text-align:center;padding:65px 20px}
+
+.hero h1{font-size:clamp(36px,7vw,68px);margin:10px}
+
+.hero p{color:#cbd5e1;line-height:1.7}
+
+.cars{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+  gap:20px;padding:20px;max-width:1100px;margin:auto;
+
+}
+
+.card{
+
+  background:#15112b;border:1px solid #7c3aed;
+
+  border-radius:18px;padding:22px;
+
+  box-shadow:0 0 20px #7c3aed33;
+
+  transition:transform .25s;
+
+}
+
+.card:hover{transform:translateY(-6px)}
+
+.car{
+
+  font-size:60px;text-align:center;padding:20px;
+
+  background:linear-gradient(135deg,#312e81,#164e63);
+
+  border-radius:12px;
+
+}
+
+.card p{color:#cbd5e1;line-height:1.6}
+
+button{
+
+  border:0;border-radius:10px;padding:12px 18px;
+
+  color:white;background:linear-gradient(90deg,#7c3aed,#0891b2);
+
+  cursor:pointer;font-size:16px;
+
+}
+
+section h2{text-align:center}
+
+.articles{max-width:850px;margin:auto;padding:20px}
+
+article{padding:20px;margin:15px 0;background:#15112b;border-radius:14px}
+
+footer{text-align:center;padding:30px;color:#94a3b8}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">wOm ✦</div>
+
+  <p>THE FANTASY OF SPEED</p>
+
+  <nav>
+
+    <a href="#home">หน้าแรก</a>
+
+    <a href="#cars">รถสปอร์ต</a>
+
+    <a href="#news">บทความ</a>
+
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+  <p>WELCOME TO THE WORLD OF SUPERCARS</p>
+
+  <h1>DRIVE YOUR<br>FANTASY</h1>
+
+  <p>โลกของรถสปอร์ต ความเร็ว และจินตนาการ</p>
+
+  <button onclick="document.querySelector('#cars').scrollIntoView({behavior:'smooth'})">
+
+    สำรวจรถสปอร์ต
+
+  </button>
+
+</section>
+
+<section id="cars">
+
+  <h2>✦ SPORT CARS ✦</h2>
+
+  <div class="cars">
+
+    <div class="card">
+
+      <div class="car">🏎️</div>
+
+      <h3>Nissan GT-R R35</h3>
+
+      <p>Godzilla แห่งวงการรถสปอร์ต โดดเด่นด้วยระบบขับเคลื่อนและสมรรถนะสูง</p>
+
+      <button onclick="showInfo('Nissan GT-R R35')">ดูรายละเอียด</button>
+
+    </div>
+
+    <div class="card">
+
+      <div class="car">🏁</div>
+
+      <h3>Toyota Supra MK5</h3>
+
+      <p>รถสปอร์ตดีไซน์ดุดัน เหมาะกับผู้หลงใหลในความเร็วและการแต่งรถ</p>
+
+      <button onclick="showInfo('Toyota Supra MK5')">ดูรายละเอียด</button>
+
+    </div>
+
+    <div class="card">
+
+      <div class="car">✨</div>
+
+      <h3>BMW M4</h3>
+
+      <p>รถคูเป้สมรรถนะสูง ผสานความหรูหราและความสนุกในการขับขี่</p>
+
+      <button onclick="showInfo('BMW M4')">ดูรายละเอียด</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="news" class="articles">
+
+  <h2>✦ CAR STORIES ✦</h2>
+
+  <article>
+
+    <h3>ตำนาน Nissan GT-R</h3>
+
+    <p>เรื่องราวของรถสปอร์ตที่สร้างชื่อจากเทคโนโลยีและสมรรถนะอันโดดเด่น</p>
+
+  </article>
+
+  <article>
+
+    <h3>Supra กับโลกแห่งการแต่งรถ</h3>
+
+    <p>สำรวจแนวคิดการออกแบบและวัฒนธรรมรถแต่งที่ทำให้ Supra เป็นที่จดจำ</p>
+
+  </article>
+
+  <article>
+
+    <h3>BMW M4: สปอร์ตหรู</h3>
+
+    <p>เรียนรู้การผสมผสานระหว่างดีไซน์ ความสะดวกสบาย และสมรรถนะ</p>
+
+  </article>
+
+</section>
+
+</main>
+
+<footer>© 2026 wOm • Fantasy Sports Car World</footer>
+
+<script>
+
+function showInfo(car){
+
+  alert("ยินดีต้อนรับสู่ "+car+" 🚗\nเว็บไซต์ wOm กำลังพาคุณสำรวจโลกของรถสปอร์ต!");
+
+}
+
+</script>
+
+</body>
+
+</html>
